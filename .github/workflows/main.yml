@@ -15,8 +15,6 @@ jobs:
         with:
           name: dist-files
           path: .output/public
-      - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v2.0.0
 
   deploy:
     runs-on: ubuntu-latest
