@@ -1,0 +1,104 @@
+html
+  box-sizing: border-box
+
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+a
+  display: inline-block
+  text-decoration: none
+  color: $color-black
+
+ul,li 
+  margin: 0
+  padding: 0
+  list-style: none
+
+p 
+  font-size: 18px
+  color: $color-dark
+
+html,
+body 
+  height: 100%
+  font-family: 'Montserrat', sans-serif
+  font-size: 18px
+  color: $color-dark
+
+.container
+  width: 100%
+  max-width: 1310px
+  margin: 0 auto
+  padding:0  15px
+
+#__nuxt
+  width: 100%
+
+.btn
+  height: 46px
+  font-family: 'Montserrat', sans-serif
+  font-size: 18px
+  font-weight: 400
+  padding: 10px
+  min-width: 164px
+  background-color: $color-dark
+  color: $color-white
+  text-align: center
+  vertical-align: middle
+  user-select: none
+  outline: none
+  transition: all 0.22s
+  place-content: center
+  place-items: center
+  width: fit-content
+  border:1px solid transparent
+  &:hover
+    cursor: pointer 
+    background-color: $color-blue
+  &.secondary
+    background-color: $color-blue
+    &:hover
+      cursor: pointer 
+      background-color: transparent
+      border:1px solid $color-blue
+
+h2
+  padding: 0
+  margin: 0
+
+.input
+  height: 30px
+  padding: 3px 12px
+  outline: none
+  border: none
+  color: $color-white
+  border-bottom: 1px solid $color-grey
+  background-color: transparent
+  &::placeholder 
+    color: $color-grey
+  &:focus 
+    border-bottom: 1px solid $color-blue
+  &.active 
+    border-bottom: 1px solid $color-white
+
+@media (max-width: 992px)
+  html,
+  body 
+    font-size: 16px
+  p
+    font-size: 16px
+
+
+@media (max-width: 768px)
+  html,
+  body 
+    font-size: 14px
+  p
+    font-size: 14px
+
+
+@media (max-width: 401px)
+  h1
+    font-size: 18px

@@ -1,0 +1,67 @@
+.article_intro_block
+  margin-top: 40px
+  margin-bottom: 40px
+  display: flex
+  justify-content: space-between
+  gap: 30px
+  &__content
+    margin-top: 50px
+  &__image 
+    width: 541px
+    height: 580px
+    border-radius: 0 200px 0 0 
+  &__title 
+    font-weight: 800
+    font-size: 56px
+    color: $color-dark
+    margin-bottom: 20px
+  &__text 
+    font-size: 18px
+    font-weight: 400
+    color: $color-dark
+    margin-top: 20px
+  &__info 
+    font-size: 14px
+    font-weight: 400
+    color: $color-grey
+    position: relative
+    padding-left: 20px
+    &:before 
+      position: absolute
+      top: 2px
+      left: 0
+    &.reading:before 
+      content: url('~/assets/img/reading.svg')
+    &.views:before 
+      content: url('~/assets/img/views.svg')
+    
+@media (max-width: 1140px)
+  .article_intro_block
+    &__title
+      font-size: 48px
+    &__image 
+      width: 100%
+      max-width: 400px
+      height: auto
+
+@media (max-width: 850px)
+  .article_intro_block
+    gap: 0
+    flex-direction: column
+    &__title
+      font-size: 42px
+    &__image
+      max-width: 100%
+
+@media (max-width: 768px)
+  .article_intro_block
+    &__title
+      font-size: 32px
+    &__text
+      font-size: 14px
+
+
+@media (max-width: 401px)
+  .article_intro_block
+    &__title
+      font-size: 24px

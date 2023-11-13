@@ -1,0 +1,25 @@
+.subscribe_form_block
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background-color: $color-dark
+  color: $color-white
+  padding: 5px 30px
+  &__btn 
+    margin-left: 30px 
+
+@media (max-width: 870px)
+  .subscribe_form_block
+    display: block
+    &__input
+      display: block
+      width: 100%
+      margin-bottom: 20px
+    &__btn
+      display: block
+      width: 100%
+      margin: 0
+
+@media (max-width: 401px)
+  .subscribe_form_block
+    padding: 5px 20px

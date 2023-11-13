@@ -1,0 +1,39 @@
+.article_list_block
+  margin-top: 40px
+  margin-bottom: 40px
+  &__title
+    margin-bottom: 30px
+  &__wrapper
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    grid-template-rows: auto
+    gap: 30px
+  &__item
+    img
+      width: 405px
+      height: 320px
+
+@media (max-width: 1340px)
+  .article_list_block
+    &__wrapper
+      grid-template-columns: repeat(2,1fr)
+      justify-items: center
+
+@media (max-width: 880px)
+  .article_list_block
+    &__wrapper
+      grid-template-columns: 1fr
+    &__item
+      width: 100%
+      text-align: center
+
+@media (max-width: 463px)
+  .article_list_block
+    &__title
+      margin-bottom: 10px
+    &__item
+      img
+        width: 100%
+        height: auto
+    &__button
+      width: 100%
