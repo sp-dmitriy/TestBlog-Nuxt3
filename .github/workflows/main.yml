@@ -24,10 +24,11 @@ jobs:
         with:
           name: dist-files
           path: .output/public
-      - name: Deploy 
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: .output/public
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
 
           
 
