@@ -23,16 +23,11 @@ jobs:
         run: npm ci
       - name: Build project
         run: npm run generate
-      # - name: Upload artifacts
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: dist-files
-      #     path: .output/public
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public       
+          name: dist-files
+          path: .output/public
+     
         
         
