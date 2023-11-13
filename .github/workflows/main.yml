@@ -19,11 +19,11 @@ jobs:
         run: npm ci
       - name: Build project
         run: npm run generate
-      # - name: Upload artifacts
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: dist-files
-      #     path: .output/public
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-files
+          path: .output/public
       - name: Deploy 
         uses: JamesIves/github-pages-deploy-action@v4
         with:
